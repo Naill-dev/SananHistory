@@ -297,5 +297,603 @@
 
   <script src="js/quiz-data.js"></script>
   <script src="js/main.js"></script>
+    <!-- XİDMƏTLƏR -->
+  <section id="xidmetler" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        <div class="inline-block px-3 py-1 rounded-full text-xs font-semibold badge-neon">
+          <i class="fa-solid fa-layer-group mr-1.5 text-[#E28743]"></i> Tədris Xidmətləri
+        </div>
+        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white">
+          İxtisaslaşdırılmış <span class="text-[#E28743]">Hazırlıq Kursları</span>
+        </h2>
+        <p class="text-[#D4C3B3] text-base">Hədəfinizə uyğun xüsusi hazırlanmış tədris proqramını seçin və dərhal dərslərə başlayın.</p>
+
+        <div class="flex flex-wrap justify-center gap-2 pt-4">
+          <button class="filter-btn px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-[#E28743] text-white shadow-lg" data-filter="all">Bütün Xidmətlər</button>
+          <button class="filter-btn px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-[#27170D] text-[#D4C3B3] hover:text-white border border-[#6B4226]/40" data-filter="abituriyent">Abituriyent (IX-XI)</button>
+          <button class="filter-btn px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-[#27170D] text-[#D4C3B3] hover:text-white border border-[#6B4226]/40" data-filter="lisey-olimpiada">Lisey & Olimpiada</button>
+          <button class="filter-btn px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-[#27170D] text-[#D4C3B3] hover:text-white border border-[#6B4226]/40" data-filter="miq">MİQ & Sertifikasiya</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Abituriyent -->
+        <div class="service-card glass-brown-card rounded-3xl p-7 flex flex-col justify-between relative group" data-category="abituriyent">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-14 h-14 rounded-2xl bg-[#3E2415] border border-[#E28743]/50 text-[#E28743] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full badge-neon">Ən Çox Seçilən</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-2 group-hover:text-[#E28743] transition-colors">Abituriyent IX-XI Sinif Hazırlığı</h3>
+            <p class="text-[#D4C3B3] text-sm leading-relaxed mb-6">DİM qəbul imtahanı modelinə tam uyğun proqram. Azərbaycan və Ümumi Tarix fənləri üzrə bütün dövrlərin dərin və izahlı tədrisi.</p>
+            <div class="space-y-2.5 text-xs text-[#FAF6F0] mb-6">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>Həftəlik mövzu sınaqları və aylıq blok imtahanları</span></div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>Müəllif konspektləri və xronoloji sxemlər</span></div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>Xəritə və tarixi mənbə testləri üzrə xüsusi dərs</span></div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-[#6B4226]/40 flex items-center justify-between">
+            <span class="text-xs text-[#DDA15E] font-semibold">Qrup & Fərdi Format</span>
+            <button class="open-reg-modal btn-neon px-4 py-2 rounded-xl text-xs font-bold" data-service="Abituriyent IX-XI Sinif">Qeydiyyatdan Keç</button>
+          </div>
+        </div>
+
+        <!-- Təkmilləşdirmə -->
+        <div class="service-card glass-brown-card rounded-3xl p-7 flex flex-col justify-between relative group" data-category="abituriyent">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-14 h-14 rounded-2xl bg-[#3E2415] border border-[#E28743]/50 text-[#E28743] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#3E2415] text-[#DDA15E] border border-[#6B4226]">V-VIII Siniflər</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-2 group-hover:text-[#E28743] transition-colors">Təkmilləşdirmə Hazırlığı</h3>
+            <p class="text-[#D4C3B3] text-sm leading-relaxed mb-6">Məktəb dərslərində çətinlik çəkən, təməl biliklərini möhkəmləndirmək və gələcək abituriyent imtahanına indidən güclü başlamaq istəyənlər üçün.</p>
+            <div class="space-y-2.5 text-xs text-[#FAF6F0] mb-6">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>Məktəb proqramının asan və maraqlı şəkildə mənimsənilməsi</span></div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>Tarixə sevgi və maraq formalaşdırılması</span></div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>KSM və BSM-lərə zəmanətli hazırlıq</span></div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-[#6B4226]/40 flex items-center justify-between">
+            <span class="text-xs text-[#DDA15E] font-semibold">Təməl Bünövrə</span>
+            <button class="open-reg-modal btn-neon px-4 py-2 rounded-xl text-xs font-bold" data-service="Təkmilləşdirmə Hazırlığı">Qeydiyyatdan Keç</button>
+          </div>
+        </div>
+
+        <!-- Lisey -->
+        <div class="service-card glass-brown-card rounded-3xl p-7 flex flex-col justify-between relative group" data-category="lisey-olimpiada">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-14 h-14 rounded-2xl bg-[#3E2415] border border-[#E28743]/50 text-[#E28743] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full badge-neon">Nüfuzlu Liseylər</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-2 group-hover:text-[#E28743] transition-colors">Liseylərə Hazırlıq</h3>
+            <p class="text-[#D4C3B3] text-sm leading-relaxed mb-6">FRİTL, Kimya-Biologiya Təmayüllü Lisey, Hədəf, Dəyanət və digər qabaqcıl liseylərin qəbul imtahanları üçün xüsusi intensivləşdirilmiş proqram.</p>
+            <div class="space-y-2.5 text-xs text-[#FAF6F0] mb-6">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>Liseylərin xüsusi qəbul formatına uyğun testlər</span></div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>Məntiqi və analitik düşüncəni inkişaf etdirən tapşırıqlar</span></div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>Vaxt idarəetməsi və imtahan psixologiyası təlimi</span></div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-[#6B4226]/40 flex items-center justify-between">
+            <span class="text-xs text-[#DDA15E] font-semibold">Qəbul Zəmanəti</span>
+            <button class="open-reg-modal btn-neon px-4 py-2 rounded-xl text-xs font-bold" data-service="Liseylərə Hazırlıq">Qeydiyyatdan Keç</button>
+          </div>
+        </div>
+
+        <!-- Olimpiada -->
+        <div class="service-card glass-brown-card rounded-3xl p-7 flex flex-col justify-between relative group" data-category="lisey-olimpiada">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-14 h-14 rounded-2xl bg-[#3E2415] border border-[#E28743]/50 text-[#E28743] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-medal"></i>
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40">RFO Səviyyəsi</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-2 group-hover:text-[#E28743] transition-colors">Olimpiada Hazırlığı (RFO)</h3>
+            <p class="text-[#D4C3B3] text-sm leading-relaxed mb-6">Respublika Fənn Olimpiadaları və digər müsabiqələrdə medal qazanmaq istəyən istedadlı şagirdlər üçün.</p>
+            <div class="space-y-2.5 text-xs text-[#FAF6F0] mb-6">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>Dərinləşdirilmiş elmi mənbələr və arxiv sənədlərinin təhlili</span></div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>Mübahisəli xronoloji paralellərin araşdırılması</span></div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>Yarımfinal və final mərhələsi tapşırıqlarının analizi</span></div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-[#6B4226]/40 flex items-center justify-between">
+            <span class="text-xs text-[#DDA15E] font-semibold">Qızıl Hədəf</span>
+            <button class="open-reg-modal btn-neon px-4 py-2 rounded-xl text-xs font-bold" data-service="Olimpiada Hazırlığı">Qeydiyyatdan Keç</button>
+          </div>
+        </div>
+
+        <!-- MİQ -->
+        <div class="service-card glass-brown-card rounded-3xl p-7 flex flex-col justify-between relative group" data-category="miq">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-14 h-14 rounded-2xl bg-[#3E2415] border border-[#E28743]/50 text-[#E28743] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-chalkboard-user"></i>
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">Müəllimlər Üçün</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-2 group-hover:text-[#E28743] transition-colors">MİQ və Sertifikasiya Hazırlığı</h3>
+            <p class="text-[#D4C3B3] text-sm leading-relaxed mb-6">Müəllimlərin İşə Qəbulu və Sertifikasiya imtahanlarında yüksək bal toplamaq istəyənlər üçün peşəkar kurs.</p>
+            <div class="space-y-2.5 text-xs text-[#FAF6F0] mb-6">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>MİQ çərçivə sənədinə 100% uyğunlaşdırılmış tədris planı</span></div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>Çətin tipli mənbə, təqvim və xəritə testlərinin açılışı</span></div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>Vaxt qazandıran praktik həll alqoritmləri</span></div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-[#6B4226]/40 flex items-center justify-between">
+            <span class="text-xs text-[#DDA15E] font-semibold">50+ Yüksək Bal</span>
+            <button class="open-reg-modal btn-neon px-4 py-2 rounded-xl text-xs font-bold" data-service="MİQ və Sertifikasiya Hazırlığı">Qeydiyyatdan Keç</button>
+          </div>
+        </div>
+
+        <!-- Onlayn -->
+        <div class="service-card glass-brown-card rounded-3xl p-7 flex flex-col justify-between relative group" data-category="abituriyent">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-14 h-14 rounded-2xl bg-[#3E2415] border border-[#E28743]/50 text-[#E28743] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-laptop-file"></i>
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full badge-neon">Onlayn & Əyani</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-2 group-hover:text-[#E28743] transition-colors">Fərdi Onlayn & Əyani Dərslər</h3>
+            <p class="text-[#D4C3B3] text-sm leading-relaxed mb-6">Azərbaycanın istənilən yerindən və ya xaricdən qoşula biləcəyiniz yüksək keyfiyyətli onlayn dərslər.</p>
+            <div class="space-y-2.5 text-xs text-[#FAF6F0] mb-6">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>Hər dərsin video qeydiyyatı və arxivinə ömürlük çıxış</span></div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>Elektron test platforması üzərindən anında yoxlanış</span></div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#E28743]"></i> <span>Valideynə həftəlik rəqəmsal hesabat</span></div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-[#6B4226]/40 flex items-center justify-between">
+            <span class="text-xs text-[#DDA15E] font-semibold">Məsafəsiz Təhsil</span>
+            <button class="open-reg-modal btn-neon px-4 py-2 rounded-xl text-xs font-bold" data-service="Onlayn Tarix Dərsləri">Qeydiyyatdan Keç</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KVEST -->
+  <section id="kvest" class="py-20 bg-gradient-to-b from-[#1F1209] to-[#120A05] border-t border-[#6B4226]/30 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center space-y-3 mb-10">
+        <div class="inline-block px-3 py-1 rounded-full text-xs font-semibold badge-neon">
+          <i class="fa-solid fa-fire text-[#E28743] mr-1"></i> İnteraktiv Tarix Kvesti
+        </div>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
+          Tarix Biliyinizi <span class="text-[#E28743]">2 Dəqiqədə Yoxlayın!</span>
+        </h2>
+        <p class="text-[#D4C3B3] text-sm sm:text-base">5 maraqlı tarixi suala cavab verin, bilik səviyyənizi və sizə uyğun hazırlıq tövsiyəsini dərhal əldə edin.</p>
+      </div>
+
+      <div class="rounded-3xl bg-[#27170D] border-2 border-[#E28743]/50 p-6 sm:p-10 shadow-[0_0_35px_rgba(226,135,67,0.25)] relative">
+        <div class="w-full bg-[#120A05] h-2 rounded-full mb-8 overflow-hidden">
+          <div id="quizProgressBar" class="bg-gradient-to-r from-[#BC6C25] to-[#E28743] h-full w-[20%] transition-all duration-300"></div>
+        </div>
+
+        <div id="quizActiveBox">
+          <div class="flex justify-between items-center text-xs text-[#DDA15E] font-semibold mb-4">
+            <span>Sual <span id="quizCurrentNum" class="text-white text-base">1</span> / 5</span>
+            <span class="flex items-center gap-1.5"><i class="fa-regular fa-clock"></i> Vaxt məhdudiyyətsiz</span>
+          </div>
+          <div id="quizQuestionContainer"></div>
+          <div class="mt-8 pt-6 border-t border-[#6B4226]/40 flex justify-end">
+            <button id="quizNextBtn" class="btn-neon px-7 py-3 rounded-xl text-sm font-bold opacity-50 cursor-not-allowed" disabled>Növbəti Sual</button>
+          </div>
+        </div>
+
+        <div id="quizResultBox" class="hidden text-center py-6 space-y-6">
+          <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-tr from-[#6B4226] to-[#E28743] flex items-center justify-center text-3xl text-white shadow-[0_0_25px_rgba(226,135,67,0.5)]">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div>
+            <span id="quizResultBadge" class="inline-block px-4 py-1.5 rounded-full text-xs font-bold border uppercase tracking-wider mb-2">Səviyyə</span>
+            <h3 id="quizResultTitle" class="font-heading text-2xl sm:text-3xl font-extrabold text-white">Nəticəniz Hazırlanır...</h3>
+            <p class="text-[#E28743] font-heading text-4xl font-black mt-2" id="quizScoreText">0 / 5</p>
+          </div>
+          <p id="quizResultDesc" class="text-[#D4C3B3] text-sm sm:text-base max-w-xl mx-auto leading-relaxed">Tövsiyə mətni...</p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <a id="quizResultWhatsAppBtn" href="#" target="_blank" class="w-full sm:w-auto btn-neon px-8 py-3.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Tövsiyə Olunan Qrupa Yazıl</span>
+            </a>
+            <button id="quizRestartBtn" class="w-full sm:w-auto btn-neon-outline px-6 py-3.5 rounded-xl font-semibold text-sm flex items-center justify-center gap-2">
+              <i class="fa-solid fa-rotate-right"></i>
+              <span>Yenidən Sına</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METODİKA -->
+  <section id="metodika" class="py-20 bg-[#FAF6F0] text-[#1E120A] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-block px-4 py-1 rounded-full text-xs font-bold bg-[#6B4226]/10 text-[#6B4226] border border-[#6B4226]/20">Uğurun Sirri</div>
+        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-[#1E120A]">
+          4 İllik Təcrübədən Doğulan <br>
+          <span class="text-[#BC6C25]">Xüsusi Tədris Metodikası</span>
+        </h2>
+        <p class="text-[#6B4226] text-base">Biz tələbələrə təkcə dərsi keçmirik, onların imtahan anına qədər bütün addımlarını planlayırıq.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="light-feature-card p-7 rounded-3xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-[#F3E9DC] text-[#BC6C25] flex items-center justify-center font-heading font-black text-xl mb-6">01</div>
+            <h3 class="font-heading text-xl font-bold text-[#1E120A] mb-2">Təməl Diaqnostika</h3>
+            <p class="text-[#6B4226] text-sm leading-relaxed">Hər bir şagirdin ilkin bilik səviyyəsi və boşluqları fərdi sınaqla aşkarlanır və fərdi inkişaf xəritəsi qurulur.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#6B4226]/15 text-xs font-semibold text-[#BC6C25]">Fərdi Planlama</div>
+        </div>
+        <div class="light-feature-card p-7 rounded-3xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-[#F3E9DC] text-[#BC6C25] flex items-center justify-center font-heading font-black text-xl mb-6">02</div>
+            <h3 class="font-heading text-xl font-bold text-[#1E120A] mb-2">Vizual & Məntiqi Dərs</h3>
+            <p class="text-[#6B4226] text-sm leading-relaxed">Xəritələr, xronoloji şkalalar və səbəb-nəticə zəncirləri ilə mövzu beyində möhkəm canlandırılır.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#6B4226]/15 text-xs font-semibold text-[#BC6C25]">Sıfır Əzbərçilik</div>
+        </div>
+        <div class="light-feature-card p-7 rounded-3xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-[#F3E9DC] text-[#BC6C25] flex items-center justify-center font-heading font-black text-xl mb-6">03</div>
+            <h3 class="font-heading text-xl font-bold text-[#1E120A] mb-2">Həftəlik Sınaq Sistemi</h3>
+            <p class="text-[#6B4226] text-sm leading-relaxed">DİM və MİQ modelinə uyğunlaşdırılmış testlərlə öyrənilən mövzular davamlı möhkəmləndirilir.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#6B4226]/15 text-xs font-semibold text-[#BC6C25]">Daimi Təkrarlama</div>
+        </div>
+        <div class="light-feature-card p-7 rounded-3xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-[#F3E9DC] text-[#BC6C25] flex items-center justify-center font-heading font-black text-xl mb-6">04</div>
+            <h3 class="font-heading text-xl font-bold text-[#1E120A] mb-2">Zirvə Nəticə</h3>
+            <p class="text-[#6B4226] text-sm leading-relaxed">İmtahan stresindən azad, özünə güvənən və yüksək balla istədiyi yerə qəbul olan tələbələr!</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#6B4226]/15 text-xs font-semibold text-[#BC6C25]">100% Uğur</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NƏTİCƏLƏR -->
+  <section id="netice" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-block px-3 py-1 rounded-full text-xs font-semibold badge-neon">
+          <i class="fa-solid fa-star text-amber-400 mr-1"></i> Tələbə & Valideyn Rəyləri
+        </div>
+        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white">
+          400+ Tələbənin <span class="text-[#E28743]">Uğur Sözləri</span>
+        </h2>
+        <p class="text-[#D4C3B3] text-base">Sənan müəllimlə hazırlaşan tələbələrin və valideynlərin səmimi fikirləri.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-brown-card rounded-3xl p-8 relative flex flex-col justify-between">
+          <span class="quote-mark">“</span>
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-[#D4C3B3] text-sm leading-relaxed mb-6 italic relative z-10">
+              "Tarix fənnindən xronologiyanı heç cür yadda saxlaya bilmirdim. Sənan müəllimin izah etdiyi xüsusi məntiq və xəritə dərslərindən sonra blok imtahanında tarixdən maksimum nəticə göstərdim və hüquq fakültəsinə qəbul oldum!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3.5 pt-4 border-t border-[#6B4226]/40">
+            <div class="w-11 h-11 rounded-full bg-[#E28743]/20 border border-[#E28743] flex items-center justify-center font-bold text-[#FAF6F0]">RA</div>
+            <div>
+              <h4 class="font-bold text-white text-sm">Rəşad Əliyev</h4>
+              <p class="text-xs text-[#E28743]">Abituriyent (DİM Qəbul: 645 Bal)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-brown-card rounded-3xl p-8 relative flex flex-col justify-between">
+          <span class="quote-mark">“</span>
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-[#D4C3B3] text-sm leading-relaxed mb-6 italic relative z-10">
+              "MİQ imtahanı üçün Sənan müəllimin hazırlıq qrupuna qoşuldum. Çərçivə sənədindəki ən qaranlıq məqamları o qədər aydın izah etdi ki, imtahanda 56 bal toplayaraq Bakı şəhərinə təyinat aldım."
+            </p>
+          </div>
+          <div class="flex items-center gap-3.5 pt-4 border-t border-[#6B4226]/40">
+            <div class="w-11 h-11 rounded-full bg-[#E28743]/20 border border-[#E28743] flex items-center justify-center font-bold text-[#FAF6F0]">GM</div>
+            <div>
+              <h4 class="font-bold text-white text-sm">Günel Məmmədova</h4>
+              <p class="text-xs text-[#E28743]">MİQ İmtahanı (56 Bal)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-brown-card rounded-3xl p-8 relative flex flex-col justify-between">
+          <span class="quote-mark">“</span>
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-[#D4C3B3] text-sm leading-relaxed mb-6 italic relative z-10">
+              "Oğlum 8-ci sinifdə oxuyanda tarixdən həvəssiz idi. Sənan müəllimlə dərslərdən sonra həm liseyə qəbul oldu, həm də Respublika Fənn Olimpiadasında bürünc medal qazandı."
+            </p>
+          </div>
+          <div class="flex items-center gap-3.5 pt-4 border-t border-[#6B4226]/40">
+            <div class="w-11 h-11 rounded-full bg-[#E28743]/20 border border-[#E28743] flex items-center justify-center font-bold text-[#FAF6F0]">SH</div>
+            <div>
+              <h4 class="font-bold text-white text-sm">Sevinc Həsənova</h4>
+              <p class="text-xs text-[#E28743]">Valideyn (Lisey & Olimpiada)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 bg-[#160D07]/60 border-t border-[#6B4226]/30">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 mb-14">
+        <div class="inline-block px-3 py-1 rounded-full text-xs font-semibold badge-neon">
+          <i class="fa-solid fa-circle-question mr-1.5 text-[#E28743]"></i> Məlumat Mərkəzi
+        </div>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
+          Tez-Tez Verilən <span class="text-[#E28743]">Suallar</span>
+        </h2>
+        <p class="text-[#D4C3B3] text-sm sm:text-base">Dərslərin təşkili və qeydiyyat haqqında ən çox maraqlanılan cavablar.</p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="accordion-item rounded-2xl bg-[#27170D] border border-[#6B4226]/40 overflow-hidden transition-all">
+          <button class="accordion-header w-full p-5 text-left flex items-center justify-between font-heading font-bold text-base sm:text-lg text-white hover:text-[#E28743] transition-colors">
+            <span>Dərslər onlayn, yoxsa əyani keçirilir?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon text-[#E28743] transition-transform duration-300 text-sm"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-[#D4C3B3] text-sm leading-relaxed">
+            Dərslər həm əyani, həm də interaktiv onlayn formatda keçirilir. Hər onlayn dərsin video yazısı arxivlənir və şagird istədiyi vaxt təkrar baxa bilir.
+          </div>
+        </div>
+
+        <div class="accordion-item rounded-2xl bg-[#27170D] border border-[#6B4226]/40 overflow-hidden transition-all">
+          <button class="accordion-header w-full p-5 text-left flex items-center justify-between font-heading font-bold text-base sm:text-lg text-white hover:text-[#E28743] transition-colors">
+            <span>Əlavə vəsait və test kitabı almağa ehtiyac varmı?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon text-[#E28743] transition-transform duration-300 text-sm"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-[#D4C3B3] text-sm leading-relaxed">
+            Xeyr. Sənan Abdulalı tərəfindən hazırlanmış tam müəllif konspektləri, xronoloji cədvəllər və test paketləri bütün şagirdlərə ödənişsiz təqdim olunur.
+          </div>
+        </div>
+
+        <div class="accordion-item rounded-2xl bg-[#27170D] border border-[#6B4226]/40 overflow-hidden transition-all">
+          <button class="accordion-header w-full p-5 text-left flex items-center justify-between font-heading font-bold text-base sm:text-lg text-white hover:text-[#E28743] transition-colors">
+            <span>Qruplarda neçə nəfər olur?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon text-[#E28743] transition-transform duration-300 text-sm"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-[#D4C3B3] text-sm leading-relaxed">
+            Tədrisin keyfiyyətini təmin etmək üçün qruplar kiçik tərkibdə (maksimum 4-6 nəfər) formalaşdırılır. Fərdi hazırlıq da mümkündür.
+          </div>
+        </div>
+
+        <div class="accordion-item rounded-2xl bg-[#27170D] border border-[#6B4226]/40 overflow-hidden transition-all">
+          <button class="accordion-header w-full p-5 text-left flex items-center justify-between font-heading font-bold text-base sm:text-lg text-white hover:text-[#E28743] transition-colors">
+            <span>Ödənişsiz sınaq dərsi mümkündürmü?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon text-[#E28743] transition-transform duration-300 text-sm"></i>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-[#D4C3B3] text-sm leading-relaxed">
+            Bəli! Qeydiyyatdan keçən hər bir şagird üçün ilk tanışlıq və səviyyə müəyyənetmə dərsi tamamilə ödənişsizdir.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ƏLAQƏ -->
+  <section id="elaqe" class="py-20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-block px-3 py-1 rounded-full text-xs font-semibold badge-neon">
+            <i class="fa-solid fa-envelope-open-text mr-1.5 text-[#E28743]"></i> Bizimlə Əlaqə
+          </div>
+          <h2 class="font-heading text-3xl sm:text-4xl font-black text-white leading-tight">
+            Gələcək Uğurunuza <br>
+            <span class="text-[#E28743]">Bu Gün Bir Addım Atın!</span>
+          </h2>
+          <p class="text-[#D4C3B3] text-sm sm:text-base leading-relaxed">
+            Qeydiyyatdan keçmək, qrup cədvəllərini öyrənmək və ya ödənişsiz sınaq dərsinə yazılmaq üçün formu doldurun və ya birbaşa WhatsApp-dan yazın.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <a href="tel:+994500000000" class="flex items-center gap-4 p-4 rounded-2xl bg-[#27170D] border border-[#6B4226]/40 hover:border-[#E28743] transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-[#3E2415] text-[#E28743] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <span class="text-xs text-[#9E8A7A] block">Əlaqə Nömrəsi</span>
+                <strong class="text-white text-base group-hover:text-[#E28743] transition-colors">+994 (70) 862 38 27</strong>
+              </div>
+            </a>
+            <a href="https://wa.me/708623827" target="_blank" class="flex items-center gap-4 p-4 rounded-2xl bg-[#27170D] border border-[#6B4226]/40 hover:border-[#25D366] transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-[#122A1A] text-[#25D366] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <span class="text-xs text-[#9E8A7A] block">WhatsApp Qaynar Xətti</span>
+                <strong class="text-white text-base group-hover:text-[#25D366] transition-colors">+994 (50) 000 00 00</strong>
+              </div>
+            </a>
+            <div class="flex items-center gap-4 p-4 rounded-2xl bg-[#27170D] border border-[#6B4226]/40">
+              <div class="w-12 h-12 rounded-xl bg-[#3E2415] text-[#E28743] flex items-center justify-center text-xl">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <span class="text-xs text-[#9E8A7A] block">Məkan & Format</span>
+                <strong class="text-white text-sm">Bakı şəhəri & Bütün Azərbaycan üzrə Onlayn</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="rounded-3xl bg-[#27170D] border-2 border-[#E28743]/40 p-8 sm:p-10 shadow-2xl relative">
+            <h3 class="font-heading text-2xl font-bold text-white mb-2">Sürətli Dərs Qeydiyyatı</h3>
+            <p class="text-xs text-[#D4C3B3] mb-6">Məlumatlarınızı daxil edin, birbaşa WhatsApp vasitəsilə əlaqə yaradılsın.</p>
+
+            <form id="mainContactForm" class="space-y-4">
+              <div>
+                <label for="contactName" class="block text-xs font-semibold text-[#D4C3B3] mb-1.5">Adınız və Soyadınız *</label>
+                <input type="text" id="contactName" required placeholder="məs: Əli Məmmədov" class="w-full px-4 py-3.5 rounded-xl bg-[#1A0E07] border border-[#6B4226]/50 text-white placeholder-[#9E8A7A] focus:outline-none focus:border-[#E28743] focus:ring-1 focus:ring-[#E28743] text-sm">
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contactPhone" class="block text-xs font-semibold text-[#D4C3B3] mb-1.5">Əlaqə / WhatsApp Nömrəniz *</label>
+                  <input type="tel" id="contactPhone" required placeholder="050 123 45 67" class="w-full px-4 py-3.5 rounded-xl bg-[#1A0E07] border border-[#6B4226]/50 text-white placeholder-[#9E8A7A] focus:outline-none focus:border-[#E28743] focus:ring-1 focus:ring-[#E28743] text-sm">
+                </div>
+                <div>
+                  <label for="contactService" class="block text-xs font-semibold text-[#D4C3B3] mb-1.5">Hazırlıq İstiqaməti *</label>
+                  <select id="contactService" class="w-full px-4 py-3.5 rounded-xl bg-[#1A0E07] border border-[#6B4226]/50 text-white focus:outline-none focus:border-[#E28743] focus:ring-1 focus:ring-[#E28743] text-sm">
+                    <option value="Abituriyent IX-XI Sinif">Abituriyent IX-XI Sinif</option>
+                    <option value="Təkmilləşdirmə Hazırlığı">Təkmilləşdirmə Hazırlığı (V-VIII)</option>
+                    <option value="Liseylərə Hazırlıq">Liseylərə Hazırlıq</option>
+                    <option value="Olimpiada Hazırlığı">Olimpiada Hazırlığı (RFO)</option>
+                    <option value="MİQ və Sertifikasiya">MİQ və Sertifikasiya</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="contactMessage" class="block text-xs font-semibold text-[#D4C3B3] mb-1.5">Əlavə Qeyd (İstəyə bağlı)</label>
+                <textarea id="contactMessage" rows="3" placeholder="məs: İmtahanda 600+ bal hədəfləyirəm..." class="w-full px-4 py-3 rounded-xl bg-[#1A0E07] border border-[#6B4226]/50 text-white placeholder-[#9E8A7A] focus:outline-none focus:border-[#E28743] focus:ring-1 focus:ring-[#E28743] text-sm resize-none"></textarea>
+              </div>
+              <button type="submit" class="w-full btn-neon py-4 rounded-xl font-bold text-base flex items-center justify-center gap-2 shadow-xl">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Qeydiyyatı Tamamla və WhatsApp-a Göndər</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0A0502] border-t border-[#6B4226]/40 text-[#D4C3B3] py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#6B4226]/30">
+        <div class="lg:col-span-2 space-y-4">
+          <a href="#hero" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-[#6B4226] border border-[#E28743] flex items-center justify-center text-lg text-white">
+              <i class="fa-solid fa-landmark-dome"></i>
+            </div>
+            <div>
+              <span class="font-heading font-black text-2xl tracking-wider text-white">Sanan<span class="text-[#E28743]">History</span></span>
+            </div>
+          </a>
+          <p class="text-sm text-[#9E8A7A] max-w-sm leading-relaxed">
+            Tarix müəllimi <strong>Sənan Abdulalı</strong>-nın rəsmi tədris platforması. 4 illik təcrübə və 400+ uğurlu tələbə ilə gələcəyinizə möhkəm bünövrə qoyun.
+          </p>
+          <div class="flex items-center space-x-3 text-sm pt-2">
+            <a href="#" class="w-9 h-9 rounded-lg bg-[#1F1209] border border-[#6B4226] flex items-center justify-center text-[#DDA15E] hover:text-white hover:border-[#E28743] transition-all"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-[#1F1209] border border-[#6B4226] flex items-center justify-center text-[#DDA15E] hover:text-white hover:border-[#E28743] transition-all"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-[#1F1209] border border-[#6B4226] flex items-center justify-center text-[#DDA15E] hover:text-white hover:border-[#E28743] transition-all"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-[#1F1209] border border-[#6B4226] flex items-center justify-center text-[#DDA15E] hover:text-white hover:border-[#E28743] transition-all"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-white text-base mb-4">Keçidlər</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#haqqinda" class="hover:text-[#E28743] transition-colors">Müəllim Haqqında</a></li>
+            <li><a href="#xidmetler" class="hover:text-[#E28743] transition-colors">Tədris Kursları</a></li>
+            <li><a href="#metodika" class="hover:text-[#E28743] transition-colors">Metodologiya</a></li>
+            <li><a href="#kvest" class="hover:text-[#E28743] transition-colors">Tarix Testi</a></li>
+            <li><a href="#netice" class="hover:text-[#E28743] transition-colors">Uğur Nəticələri</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-white text-base mb-4">Hazırlıqlar</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#xidmetler" class="hover:text-[#E28743] transition-colors">Abituriyent IX-XI</a></li>
+            <li><a href="#xidmetler" class="hover:text-[#E28743] transition-colors">Təkmilləşdirmə</a></li>
+            <li><a href="#xidmetler" class="hover:text-[#E28743] transition-colors">Liseylərə Hazırlıq</a></li>
+            <li><a href="#xidmetler" class="hover:text-[#E28743] transition-colors">Olimpiada (RFO)</a></li>
+            <li><a href="#xidmetler" class="hover:text-[#E28743] transition-colors">MİQ & Sertifikasiya</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-white text-base mb-4">Brend Şüar</h4>
+          <div class="p-4 rounded-xl bg-[#1A0E07] border border-[#6B4226]/40 text-xs text-[#D4C3B3] leading-relaxed">
+            <p class="font-serif-accent italic text-[#DDA15E] mb-2">"Tarix keçmişin aynası, gələcəyin bələdçisidir."</p>
+            <p>Sənan Abdulalı ilə ən yüksək nəticələrə doğru inamla irəliləyin.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#9E8A7A] gap-4">
+        <p>© 2026 SananHistory. Bütün hüquqlar qorunur.</p>
+        <p>Müəllim: Sənan Abdulalı • 400+ Tələbə Nailiyyəti</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div id="regModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+    <div id="modalBackdrop" class="modal-backdrop absolute inset-0"></div>
+    <div class="relative w-full max-w-lg rounded-3xl bg-[#27170D] border-2 border-[#E28743] p-6 sm:p-8 shadow-[0_0_50px_rgba(226,135,67,0.35)] z-10">
+      <div class="flex items-center justify-between pb-4 border-b border-[#6B4226]/40 mb-5">
+        <div>
+          <h3 class="font-heading text-xl font-bold text-white">Dərsə Qeydiyyat</h3>
+          <p class="text-xs text-[#E28743] font-medium mt-0.5">SananHistory • Sənan Abdulalı</p>
+        </div>
+        <button id="closeModalBtn" class="w-8 h-8 rounded-full bg-[#3E2415] text-[#D4C3B3] hover:text-white flex items-center justify-center transition-colors">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form id="modalRegForm" class="space-y-4">
+        <div>
+          <label for="modalName" class="block text-xs font-semibold text-[#D4C3B3] mb-1">Adınız və Soyadınız *</label>
+          <input type="text" id="modalName" required placeholder="Əli Məmmədov" class="w-full px-4 py-3 rounded-xl bg-[#1A0E07] border border-[#6B4226]/50 text-white placeholder-[#9E8A7A] focus:outline-none focus:border-[#E28743] text-sm">
+        </div>
+        <div>
+          <label for="modalPhone" class="block text-xs font-semibold text-[#D4C3B3] mb-1">Telefon / WhatsApp Nömrəniz *</label>
+          <input type="tel" id="modalPhone" required placeholder="050 123 45 67" class="w-full px-4 py-3 rounded-xl bg-[#1A0E07] border border-[#6B4226]/50 text-white placeholder-[#9E8A7A] focus:outline-none focus:border-[#E28743] text-sm">
+        </div>
+        <div>
+          <label for="modalServiceSelect" class="block text-xs font-semibold text-[#D4C3B3] mb-1">Seçilən Xidmət *</label>
+          <select id="modalServiceSelect" class="w-full px-4 py-3 rounded-xl bg-[#1A0E07] border border-[#6B4226]/50 text-white focus:outline-none focus:border-[#E28743] text-sm">
+            <option value="Abituriyent IX-XI Sinif">Abituriyent IX-XI Sinif</option>
+            <option value="Təkmilləşdirmə Hazırlığı">Təkmilləşdirmə Hazırlığı</option>
+            <option value="Liseylərə Hazırlıq">Liseylərə Hazırlıq</option>
+            <option value="Olimpiada Hazırlığı">Olimpiada Hazırlığı</option>
+            <option value="MİQ və Sertifikasiya">MİQ və Sertifikasiya</option>
+          </select>
+        </div>
+        <div>
+          <label for="modalNote" class="block text-xs font-semibold text-[#D4C3B3] mb-1">Əlavə Qeyd (İstəyə bağlı)</label>
+          <input type="text" id="modalNote" placeholder="məs: Axşam saatları qrupuna yazılmaq istəyirəm" class="w-full px-4 py-2.5 rounded-xl bg-[#1A0E07] border border-[#6B4226]/50 text-white placeholder-[#9E8A7A] focus:outline-none focus:border-[#E28743] text-sm">
+        </div>
+        <button type="submit" class="w-full btn-neon py-3.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 mt-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>WhatsApp İlə Müraciəti Tamamla</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/994708623827?text=Salam%20Sənan%20müəllim,%20hazırlıq%20üçün%20məlumat%20almaq%20istəyirəm." target="_blank" class="whatsapp-float w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white text-3xl cursor-pointer" title="WhatsApp ilə Əlaqə">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="js/quiz-data.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
