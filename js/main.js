@@ -1,52 +1,47 @@
 // === Sayğac Animasiyası (Təkmilləşdirilmiş) ===
-if (counters.length) {
-    const animateCounter = (counter) => {
-        const target = parseInt(counter.dataset.target) || 0;
-        const suffix = counter.dataset.suffix || '';
-        const duration = 2000; // 2 saniyə
-        const startTime = performance.now();
+const counters = document.querySelectorAll('.stat-counter');
 
-        const update = (currentTime) => {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            
-            // Easing funksiyası (daha təbii görünüş)
-            const easeOut = 1 - Math.pow(1 - progress, 3);
-            const current = Math.floor(easeOut * target);
+if (counters.length > 0) {
+  const animateCounter = (counter) => {
+    const target = parseInt(counter.dataset.target) || 0;
+    const suffix = counter.dataset.suffix || '';
+    const duration = 2200;
+    const startTime = performance.now();
 
-            counter.textContent = current + suffix;
+    const update = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeOut = 1 - Math.pow(1 - progress, 3); // yumşaq bitmə
+      const current = Math.floor(easeOut * target);
 
-            if (progress < 1) {
-                requestAnimationFrame(update);
-            } else {
-                // Yekun rəqəmdə dayansın
-                counter.textContent = target + suffix;
-            }
-        };
+      counter.textContent = current + suffix;
 
+      if (progress < 1) {
         requestAnimationFrame(update);
+      } else {
+        counter.textContent = target + suffix; // yekun rəqəmdə dayansın
+      }
     };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                counters.forEach(counter => {
-                    // Artıq animasiya olunubsa yenidən işləməsin
-                    if (!counter.classList.contains('counted')) {
-                        counter.classList.add('counted');
-                        animateCounter(counter);
-                    }
-                });
-                observer.disconnect(); // Bir dəfə işləsin
-            }
-        });
-    }, { 
-        threshold: 0.4,
-        rootMargin: '0px 0px -50px 0px'
-    });
+    requestAnimationFrame(update);
+  };
 
-    const statsSection = document.getElementById('statsSection');
-    if (statsSection) {
-        observer.observe(statsSection);
-    }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        counters.forEach(counter => {
+          if (!counter.classList.contains('counted')) {
+            counter.classList.add('counted');
+            animateCounter(counter);
+          }
+        });
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.35 });
+
+  const statsSection = document.getElementById('statsSection');
+  if (statsSection) {
+    observer.observe(statsSection);
+  }
 }
