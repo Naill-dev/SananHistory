@@ -30,45 +30,40 @@ function initMobileMenu() {
 
   if (!mobileMenuBtn || !mobileMenu) return;
 
-  mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+  const toggleMenu = (show) => {
+    const isHidden = show !== undefined ? !show : !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden', isHidden);
     const icon = mobileMenuBtn.querySelector('i');
-    if (mobileMenu.classList.contains('hidden')) {
-      icon.classList.remove('fa-xmark');
-      icon.classList.add('fa-bars');
-    } else {
-      icon.classList.remove('fa-bars');
-      icon.classList.add('fa-xmark');
+    if (icon) {
+      icon.classList.toggle('fa-bars', isHidden);
+      icon.classList.toggle('fa-xmark', !isHidden);
     }
-  });
+  };
 
-  mobileNavLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-      const icon = mobileMenuBtn.querySelector('i');
-      if (icon) {
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
-      }
-    });
-  });
+  mobileMenuBtn.addEventListener('click', () => toggleMenu());
+  mobileNavLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
 }
 
 function initHeaderScroll() {
   const header = document.getElementById('mainHeader');
   if (!header) return;
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 30) {
-      header.classList.add('bg-[#18110B]/98', 'shadow-lg', 'border-b', 'border-[#5C3D28]/40');
-    } else {
-      header.classList.remove('bg-[#18110B]/98', 'shadow-lg', 'border-b', 'border-[#5C3D28]/40');
-    }
-  });
+  const handleScroll = () => {
+    const isScrolled = window.scrollY > 30;
+    header.classList.toggle('bg-[#18110B]/98', isScrolled);
+    header.classList.toggle('shadow-lg', isScrolled);
+    header.classList.toggle('border-b', isScrolled);
+    header.classList.toggle('border-[#5C3D28]/40', isScrolled);
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
 }
 
 function initStatsCounter() {
   const counters = document.querySelectorAll('.stat-counter');
+  const statsSection = document.getElementById('statsSection');
+  if (!counters.length || !statsSection) return;
+
   let animated = false;
 
   function runCounter() {
@@ -92,16 +87,17 @@ function initStatsCounter() {
     });
   }
 
-  window.addEventListener('scroll', () => {
-    const statsSection = document.getElementById('statsSection');
-    if (!statsSection || animated) return;
-
+  const checkScroll = () => {
+    if (animated) return;
     const rect = statsSection.getBoundingClientRect();
     if (rect.top <= window.innerHeight * 0.9) {
       runCounter();
       animated = true;
+      window.removeEventListener('scroll', checkScroll);
     }
-  });
+  };
+
+  window.addEventListener('scroll', checkScroll, { passive: true });
 }
 
 function initServiceFilter() {
@@ -174,13 +170,8 @@ function initQuiz() {
   const nextBtn = document.getElementById('quizNextBtn');
   const restartBtn = document.getElementById('quizRestartBtn');
 
-  if (nextBtn) {
-    nextBtn.addEventListener('click', handleNextQuestion);
-  }
-
-  if (restartBtn) {
-    restartBtn.addEventListener('click', restartQuiz);
-  }
+  if (nextBtn) nextBtn.addEventListener('click', handleNextQuestion);
+  if (restartBtn) restartBtn.addEventListener('click', restartQuiz);
 }
 
 function renderQuestion() {
@@ -189,7 +180,7 @@ function renderQuestion() {
   const progressBar = document.getElementById('quizProgressBar');
   const nextBtn = document.getElementById('quizNextBtn');
 
-  if (!container || typeof historyQuizData === 'undefined') return;
+  if (!container || typeof historyQuizData === 'undefined' || !historyQuizData.length) return;
 
   const currentQ = historyQuizData[currentQuestionIndex];
   if (!currentQ) return;
@@ -240,8 +231,6 @@ function renderQuestion() {
 }
 
 function handleOptionSelect(selectedIndex, optionButtons, currentQ) {
-  optionButtons.forEach(b => b.classList.remove('selected'));
-  
   const isCorrect = selectedIndex === currentQ.correct;
   userAnswers[currentQuestionIndex] = { selected: selectedIndex, isCorrect };
 
@@ -254,9 +243,7 @@ function handleOptionSelect(selectedIndex, optionButtons, currentQ) {
     }
   });
 
-  if (isCorrect) {
-    userScore++;
-  }
+  if (isCorrect) userScore++;
 
   const expBox = document.getElementById('explanationBox');
   if (expBox) {
@@ -294,7 +281,6 @@ function showQuizResults() {
   const progressBar = document.getElementById('quizProgressBar');
 
   if (progressBar) progressBar.style.width = '100%';
-
   if (!quizActiveBox || !quizResultBox) return;
 
   quizActiveBox.classList.add('hidden');
@@ -307,7 +293,12 @@ function showQuizResults() {
   const ctaBtn = document.getElementById('quizResultWhatsAppBtn');
 
   const total = historyQuizData.length;
-  const rec = getQuizRecommendation(userScore, total);
+  const rec = typeof getQuizRecommendation === 'function' ? getQuizRecommendation(userScore, total) : {
+    badge: "Nəticə",
+    badgeColor: "border-[#DFB287] text-[#DFB287]",
+    title: "Test Yekunlaşdı!",
+    description: "Təbriklər, testi tamamladınız."
+  };
 
   if (scoreEl) scoreEl.textContent = `${userScore} / ${total}`;
   if (badgeEl) {
@@ -318,8 +309,8 @@ function showQuizResults() {
   if (descEl) descEl.textContent = rec.description;
 
   if (ctaBtn) {
-    const text = encodeURIComponent(`Salam Sənan müəllim, SananHistory saytınızdakı biliyi yoxlama testindən ${userScore}/${total} nəticə əldə etdim. Hazırlıq dərsləri barədə məlumat almaq istəyirəm.`);
-    ctaBtn.href = `https://wa.me/${TEACHER_PHONE}?text=${text}`;
+    const message = `Salam Sənan müəllim, SananHistory saytınızdakı biliyi yoxlama testindən ${userScore}/${total} nəticə əldə etdim. Hazırlıq dərsləri barədə məlumat almaq istəyirəm.`;
+    ctaBtn.href = `https://wa.me/${TEACHER_PHONE}?text=${encodeURIComponent(message)}`;
   }
 }
 
@@ -351,8 +342,11 @@ function initModal() {
   function openModal(serviceName = '') {
     modal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
+
     if (serviceSelect && serviceName) {
-      serviceSelect.value = serviceName;
+      const options = Array.from(serviceSelect.options);
+      const match = options.find(opt => opt.value.toLowerCase().includes(serviceName.toLowerCase()) || opt.text.toLowerCase().includes(serviceName.toLowerCase()));
+      if (match) serviceSelect.value = match.value;
     }
   }
 
@@ -389,9 +383,9 @@ function initModal() {
 
       if (!name || !phone) return;
 
-      const msg = `Salam Sənan müəllim, dərslərə yazılmaq üçün müraciət edirəm:%0A%0A👤 *Ad:* ${encodeURIComponent(name)}%0A📱 *Əlaqə:* ${encodeURIComponent(phone)}%0A📚 *Seçilən Hazırlıq:* ${encodeURIComponent(service)}%0A📝 *Qeyd:* ${encodeURIComponent(note || 'Yoxdur')}`;
+      const message = `Salam Sənan müəllim, dərslərə yazılmaq üçün müraciət edirəm:\n\n👤 *Ad:* ${name}\n📱 *Əlaqə:* ${phone}\n📚 *Seçilən Hazırlıq:* ${service}\n📝 *Qeyd:* ${note || 'Yoxdur'}`;
       
-      window.open(`https://wa.me/${TEACHER_PHONE}?text=${msg}`, '_blank');
+      window.open(`https://wa.me/${TEACHER_PHONE}?text=${encodeURIComponent(message)}`, '_blank');
       closeModal();
       modalForm.reset();
     });
@@ -407,13 +401,13 @@ function initContactForm() {
     const name = document.getElementById('contactName').value.trim();
     const phone = document.getElementById('contactPhone').value.trim();
     const service = document.getElementById('contactService').value;
-    const message = document.getElementById('contactMessage').value.trim();
+    const messageText = document.getElementById('contactMessage').value.trim();
 
     if (!name || !phone) return;
 
-    const msg = `Salam Sənan müəllim, hazırlıq barədə məlumat almaq istəyirəm:%0A%0A👤 *Ad:* ${encodeURIComponent(name)}%0A📱 *Telefon:* ${encodeURIComponent(phone)}%0A📚 *Hazırlıq İstiqaməti:* ${encodeURIComponent(service)}%0A💬 *Qeyd:* ${encodeURIComponent(message || 'Məlumat almaq istəyirəm.')}`;
+    const message = `Salam Sənan müəllim, hazırlıq barədə məlumat almaq istəyirəm:\n\n👤 *Ad:* ${name}\n📱 *Telefon:* ${phone}\n📚 *Hazırlıq İstiqaməti:* ${service}\n💬 *Qeyd:* ${messageText || 'Məlumat almaq istəyirəm.'}`;
     
-    window.open(`https://wa.me/${TEACHER_PHONE}?text=${msg}`, '_blank');
+    window.open(`https://wa.me/${TEACHER_PHONE}?text=${encodeURIComponent(message)}`, '_blank');
     contactForm.reset();
   });
 }
