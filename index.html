@@ -6,7 +6,6 @@
   <title>SananHistory | Abdullalı Sənan Raqib oğlu - Tarix Müəllimi & İxtisaslaşmış Hazırlıq</title>
   <meta name="description" content="Tarix müəllimi Abdullalı Sənan Raqib oğlu ilə Abituriyent IX-XI sinif, Təkmilləşdirmə, Liseylərə, Olimpiada və MİQ / Sertifikasiya hazırlığı. MİQ 91.25 bal.">
   
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -36,33 +35,26 @@
     }
   </script>
 
-  <!-- Google Fonts & Font Awesome 6 Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <!-- AOS (Animate On Scroll) Styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
-  <!-- Custom Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg-[#18110B] text-[#FDFCFA] antialiased selection:bg-[#82583C] selection:text-white">
 
-  <!-- Zərif Arxa Fon Vurğuları -->
   <div class="subtle-ambient-glow top-0 left-0"></div>
   <div class="subtle-ambient-glow top-[45%] right-0"></div>
 
-  <!-- ==========================================================================
-       HEADER & NAVİQASİYA (Mobil və Desktop Tam Uyumlu)
-       ========================================================================== -->
   <header id="mainHeader" class="sticky top-0 z-50 transition-all duration-300 bg-[#18110B]/95 backdrop-blur-md border-b border-[#5C3D28]/25">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 sm:h-20 gap-3">
         
-        <!-- Logo -->
+   
         <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 shrink-0">
           <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#5C3D28] to-[#2B1E15] flex items-center justify-center border border-[#DFB287]/40 shadow-sm">
             <i class="fa-solid fa-landmark-dome text-base sm:text-lg text-[#DFB287]"></i>
@@ -77,7 +69,6 @@
           </div>
         </a>
 
-        <!-- Desktop Navigation -->
         <nav class="hidden lg:flex items-center space-x-5 xl:space-x-7 text-sm font-medium text-[#D1C2B4]">
           <a href="#haqqinda" class="hover:text-[#DFB287] transition-colors whitespace-nowrap py-1">Haqqında</a>
           <a href="#nesrler" class="hover:text-[#DFB287] transition-colors whitespace-nowrap py-1">Nəşrlər</a>
@@ -91,7 +82,6 @@
           <a href="#elaqe" class="hover:text-[#DFB287] transition-colors whitespace-nowrap py-1">Əlaqə</a>
         </nav>
 
-        <!-- CTA Button (Desktop & Tablet) -->
         <div class="hidden sm:flex items-center shrink-0">
           <button class="open-reg-modal btn-primary-brown px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 whitespace-nowrap">
             <i class="fa-solid fa-pen-to-square text-[#DFB287]"></i>
@@ -99,7 +89,6 @@
           </button>
         </div>
 
-        <!-- Mobile Menu Toggle Button -->
         <div class="lg:hidden flex items-center">
           <button id="mobileMenuBtn" aria-label="Menyunu Aç" class="w-10 h-10 rounded-xl border border-[#5C3D28]/50 bg-[#2B1E15] text-[#FAF7F2] hover:text-[#DFB287] flex items-center justify-center focus:outline-none active:scale-95 transition-all">
             <i class="fa-solid fa-bars text-lg"></i>
@@ -108,7 +97,6 @@
       </div>
     </div>
 
-    <!-- Mobile Dropdown Menu -->
     <div id="mobileMenu" class="hidden lg:hidden bg-[#1D140D]/98 backdrop-blur-xl border-b border-[#5C3D28]/40 px-4 sm:px-6 py-4 space-y-1.5">
       <a href="#haqqinda" class="mobile-nav-link block text-[#D1C2B4] hover:text-white hover:bg-[#2B1E15] active:bg-[#5C3D28]/40 font-medium text-sm px-3 py-2.5 rounded-xl transition-all">
         <i class="fa-solid fa-user-tie text-[#DFB287] w-5"></i> Müəllim Haqqında
@@ -141,15 +129,11 @@
     </div>
   </header>
 
-  <!-- ==========================================================================
-       HERO SECTION (Mobil & Desktop Giriş)
-       ========================================================================== -->
   <section id="hero" class="relative pt-8 pb-12 sm:pt-16 sm:pb-20 md:pt-20 md:pb-24 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
         
-        <!-- Hero Mətn -->
         <div class="lg:col-span-7 space-y-4 sm:space-y-6 text-center lg:text-left" data-aos="fade-up" data-aos-duration="650">
           
           <div class="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full badge-academic">
@@ -194,7 +178,6 @@
           </div>
         </div>
 
-        <!-- Hero Sağ Kart / Profil -->
         <div class="lg:col-span-5 relative" data-aos="fade-up" data-aos-delay="100" data-aos-duration="650">
           <div class="academic-card rounded-2xl sm:rounded-3xl p-5 sm:p-8">
             
@@ -244,9 +227,6 @@
 
       </div>
 
-      <!-- ==========================================================================
-           TƏDRİS GÖSTƏRİCİLƏRİ (Mobil Uyğun 1-dən 3-ə Grid)
-           ========================================================================== -->
       <div id="statsSection" class="mt-10 sm:mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-6">
         
         <div class="academic-card p-4 sm:p-6 rounded-2xl text-center" data-aos="fade-up" data-aos-delay="100">
@@ -284,15 +264,11 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       HAQQINDA & TƏHSİL BÖLMƏSİ
-       ========================================================================== -->
   <section id="haqqinda" class="py-12 sm:py-16 bg-[#20160F] border-y border-[#5C3D28]/30 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-start">
-        
-        <!-- Şəxsi Məlumat Kartı -->
+
         <div class="lg:col-span-5" data-aos="fade-up" data-aos-duration="600">
           <div class="academic-card p-5 sm:p-8 rounded-2xl sm:rounded-3xl space-y-4">
             <div class="w-10 h-10 rounded-xl bg-[#5C3D28]/40 text-[#DFB287] flex items-center justify-center text-xl mb-1">
@@ -330,8 +306,6 @@
             </p>
           </div>
         </div>
-
-        <!-- Təhsil və İş Xronologiyası -->
         <div class="lg:col-span-7 space-y-4 sm:space-y-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
           <div class="inline-block px-3 py-1 rounded-full text-xs font-semibold badge-academic">
             <i class="fa-solid fa-graduation-cap mr-1.5 text-[#DFB287]"></i> Təhsil & Təcrübə Yolu
@@ -371,19 +345,12 @@
                 Bakı şəhəri, Xəzər rayonu, Binə Atçılıq massivində yerləşən 292 №-li məktəbdə tarix müəllimi. 2024–2025-ci tədris ilində Zəfər kurslarının Bakıxanov və Zirvə kurslarının Əhmədli filialında fəaliyyət göstərib. Hal-hazırda <strong>Zirvə kurslarının Zabrat filialında</strong> tarix müəllimidir.
               </p>
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
   </section>
 
-  <!-- ==========================================================================
-       XÜSUSİ BÖLMƏ: NƏŞRLƏR VƏ ELMİ REDAKTORLUQ
-       ========================================================================== -->
   <section id="nesrler" class="py-12 sm:py-16 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -401,7 +368,6 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
         
-        <!-- Nəşr 1 -->
         <div class="service-card academic-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
           <div>
             <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#3D281B] text-[#DFB287] flex items-center justify-center text-lg sm:text-xl mb-3.5 sm:mb-4">
@@ -422,7 +388,6 @@
           </div>
         </div>
 
-        <!-- Nəşr 2 -->
         <div class="service-card academic-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="150">
           <div>
             <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#3D281B] text-[#DFB287] flex items-center justify-center text-lg sm:text-xl mb-3.5 sm:mb-4">
@@ -443,7 +408,6 @@
           </div>
         </div>
 
-        <!-- Nəşr 3 -->
         <div class="service-card academic-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
           <div>
             <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#3D281B] text-[#DFB287] flex items-center justify-center text-lg sm:text-xl mb-3.5 sm:mb-4">
@@ -469,9 +433,6 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       XİDMƏTLƏR BÖLMƏSİ (Mobil Filter & Kartlar)
-       ========================================================================== -->
   <section id="xidmetler" class="py-12 sm:py-16 bg-[#20160F] border-y border-[#5C3D28]/30 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -486,7 +447,6 @@
           Məqsədinizə uyğun proqramı seçərək hazırlığa başlaya bilərsiniz.
         </p>
 
-        <!-- Filter Düymələri -->
         <div class="flex flex-wrap justify-center gap-1.5 sm:gap-2 pt-2 sm:pt-3">
           <button class="filter-btn px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs font-semibold transition-all bg-[#82583C] text-white" data-filter="all">
             Hamısı
@@ -503,10 +463,8 @@
         </div>
       </div>
 
-      <!-- Xidmət Kartları -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-        
-        <!-- Xidmət 1: Abituriyent -->
+      
         <div class="service-card academic-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col justify-between" data-category="abituriyent" data-aos="fade-up" data-aos-delay="100">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -543,8 +501,6 @@
             </button>
           </div>
         </div>
-
-        <!-- Xidmət 2: Təkmilləşdirmə -->
         <div class="service-card academic-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col justify-between" data-category="abituriyent" data-aos="fade-up" data-aos-delay="150">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -619,8 +575,6 @@
             </button>
           </div>
         </div>
-
-        <!-- Xidmət 4: Olimpiada -->
         <div class="service-card academic-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col justify-between" data-category="lisey-olimpiada" data-aos="fade-up" data-aos-delay="250">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -657,8 +611,6 @@
             </button>
           </div>
         </div>
-
-        <!-- Xidmət 5: MİQ və Sertifikasiya -->
         <div class="service-card academic-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col justify-between" data-category="miq" data-aos="fade-up" data-aos-delay="300">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -696,7 +648,6 @@
           </div>
         </div>
 
-        <!-- Xidmət 6: Onlayn & Əyani -->
         <div class="service-card academic-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col justify-between" data-category="abituriyent" data-aos="fade-up" data-aos-delay="350">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -739,9 +690,6 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       İNTERAKTİV TARİX TESTİ (Mobil Uyğun Kvest)
-       ========================================================================== -->
   <section id="kvest" class="py-12 sm:py-16 relative overflow-hidden">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" data-aos="zoom-in" data-aos-duration="600">
       
@@ -758,8 +706,7 @@
       </div>
 
       <div class="academic-card rounded-2xl sm:rounded-3xl p-4 sm:p-8">
-        
-        <!-- Progress Bar -->
+   
         <div class="w-full bg-[#120C07] h-1.5 rounded-full mb-5 sm:mb-6 overflow-hidden">
           <div id="quizProgressBar" class="bg-[#C68B59] h-full w-[20%] transition-all duration-300"></div>
         </div>
@@ -771,7 +718,6 @@
           </div>
 
           <div id="quizQuestionContainer">
-            <!-- Suallar JS tərəfindən yerləşdirilir -->
           </div>
 
           <div class="mt-5 sm:mt-6 pt-4 border-t border-[#5C3D28]/35 flex justify-end">
@@ -781,7 +727,6 @@
           </div>
         </div>
 
-        <!-- Nəticə -->
         <div id="quizResultBox" class="hidden text-center py-3 sm:py-4 space-y-3.5 sm:space-y-4">
           <div class="w-12 h-12 sm:w-14 sm:h-14 mx-auto rounded-2xl bg-[#3D281B] border border-[#DFB287]/40 flex items-center justify-center text-xl sm:text-2xl text-[#DFB287]">
             <i class="fa-solid fa-clipboard-check"></i>
@@ -821,9 +766,6 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       TƏDRİS METODOLOGİYASI
-       ========================================================================== -->
   <section id="metodika" class="py-12 sm:py-16 bg-[#FAF7F2] text-[#24170E] relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -905,10 +847,6 @@
 
     </div>
   </section>
-
-  <!-- ==========================================================================
-       TEZ-TEZ VERİLƏN SUALLAR (FAQ)
-       ========================================================================== -->
   <section id="faq" class="py-12 sm:py-16 bg-[#1D130C] border-t border-[#5C3D28]/30">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -970,16 +908,11 @@
 
     </div>
   </section>
-
-  <!-- ==========================================================================
-       ƏLAQƏ & QEYDİYYAT
-       ========================================================================== -->
   <section id="elaqe" class="py-12 sm:py-16 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-center">
-        
-        <!-- Əlaqə Məlumatı -->
+
         <div class="lg:col-span-5 space-y-4 sm:space-y-5" data-aos="fade-up" data-aos-duration="600">
           <div class="inline-block px-3 py-1 rounded-full text-xs font-semibold badge-academic">
             <i class="fa-solid fa-envelope-open mr-1.5 text-[#DFB287]"></i> Əlaqə
@@ -1028,7 +961,6 @@
           </div>
         </div>
 
-        <!-- Qeydiyyat Formu -->
         <div class="lg:col-span-7" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
           <div class="academic-card rounded-2xl sm:rounded-3xl p-5 sm:p-8">
             <h3 class="font-heading text-lg sm:text-xl font-bold text-white mb-1">
@@ -1074,15 +1006,9 @@
             </form>
           </div>
         </div>
-
       </div>
-
     </div>
   </section>
-
-  <!-- ==========================================================================
-       FOOTER
-       ========================================================================== -->
   <footer class="bg-[#120C07] border-t border-[#5C3D28]/35 text-[#D1C2B4] py-8 sm:py-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -1135,10 +1061,6 @@
 
     </div>
   </footer>
-
-  <!-- ==========================================================================
-       MODAL (Mobil Uyğun Dərsə Qeydiyyat)
-       ========================================================================== -->
   <div id="regModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-3 sm:p-4">
     <div id="modalBackdrop" class="modal-backdrop absolute inset-0"></div>
 
@@ -1188,15 +1110,9 @@
       </form>
     </div>
   </div>
-
-  <!-- ==========================================================================
-       FLOATING WHATSAPP BUTTON (Mobil və Desktop üçün optimallaşdırılmış)
-       ========================================================================== -->
   <a href="https://wa.me/994708623827?text=Salam%20Sənan%20müəllim,%20hazırlıq%20dərsləri%20haqqında%20məlumat%20almaq%20istəyirəm." target="_blank" class="whatsapp-float-btn w-12 h-12 sm:w-14 sm:h-14 p-3 bg-[#25D366] rounded-full flex items-center justify-center text-white text-xl sm:text-2xl" title="WhatsApp: +994 070 862 38 27">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
-
-  <!-- Skriptlər -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="js/quiz-data.js"></script>
   <script src="js/main.js"></script>
